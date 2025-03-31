@@ -16,13 +16,13 @@ function check_prereqs() {
     exit 1
   fi
 
-  if [ "${CLUSTER_RUNTIME}" == "kind" ]; then
-    kind version > /dev/null
-    if [[ $? -ne 0 ]]; then
-      echo "No 'kind' binary available? (https://kind.sigs.k8s.io/docs/user/quick-start/#installation)"
-      exit 1
-    fi
-  fi
+#  if [ "${CLUSTER_RUNTIME}" == "kind" ]; then
+#    kind version > /dev/null
+#    if [[ $? -ne 0 ]]; then
+#      echo "No 'kind' binary available? (https://kind.sigs.k8s.io/docs/user/quick-start/#installation)"
+#      exit 1
+#    fi
+#  fi
 
   kubectl > /dev/null
   if [[ $? -ne 0 ]]; then
